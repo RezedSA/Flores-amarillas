@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Un regalo de flores amarillas</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg1:#b3122a;--bg2:#7d0a1c;--ink:#fff6dc;--gold:#ffd60a;--card:rgba(255,246,220,.12);--line:rgba(255,214,10,.5)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#8f0e22;--bg2:#4d0611;--card:rgba(255,246,220,.08)}}
+:root[data-theme="dark"]{--bg1:#8f0e22;--bg2:#4d0611;--card:rgba(255,246,220,.08)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background-color:#7d0a1c;background-image:linear-gradient(165deg,var(--bg1),var(--bg2));background-attachment:fixed;color:var(--ink);font-family:'Fredoka',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+main{max-width:560px;margin:0 auto;padding:2.5rem 1.25rem 3rem;text-align:center}
+h1{font-weight:600;font-size:clamp(2.2rem,9vw,3.4rem);line-height:1.05;margin:0 0 .4rem;color:var(--gold);letter-spacing:.01em}
+.para{font-family:'Caveat',cursive,serif;font-size:2rem;margin:0}
+.sub{margin:.2rem 0 0;opacity:.9}
+.ramo{width:min(320px,80%);margin:1.5rem auto .25rem;display:block;overflow:visible}
+.fl{cursor:pointer;transform-box:fill-box;transform-origin:50% 90%;animation:sway 4s ease-in-out infinite alternate}
+.fl:nth-of-type(2){animation-delay:-1s}.fl:nth-of-type(3){animation-delay:-2s}.fl:nth-of-type(4){animation-delay:-3s}.fl:nth-of-type(5){animation-delay:-.5s}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.hint{font-size:.9rem;opacity:.75;margin:0 0 2rem}
+.carta{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:1.4rem 1.3rem;font-size:1.1rem;margin-bottom:1.5rem}
+.etiqueta{position:relative;max-width:420px;margin:0 auto 1.75rem;padding:1rem 1.3rem 1rem 2.6rem;background:var(--ink);color:#7d0a1c;border-radius:6px 22px 22px 6px;transform:rotate(-1.5deg);text-align:left;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.etiqueta::before{content:"";position:absolute;left:.9rem;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg1);border:2px solid #7d0a1c}
+.et-t{font-family:'Caveat',cursive,serif;font-size:1.7rem;line-height:1.1;margin:0;color:#b3122a}
+.etiqueta p+p{margin:.2rem 0 0}
+.guitarra{flex:none;width:52px;padding:0;background:none;border-radius:0;transform:rotate(15deg);transition:transform .2s}
+.guitarra:hover{filter:none;transform:rotate(3deg) scale(1.1)}
+.guitarra:focus-visible{outline-color:#7d0a1c}
+.guitarra svg{display:block;width:100%}
+.perros{display:flex;flex-direction:column;align-items:center;gap:1rem;margin:0 0 2rem}
+.fila{display:flex;align-items:center;justify-content:center;gap:1rem}
+.perro{width:160px;cursor:pointer;transition:transform .2s}
+.perro:hover{transform:rotate(-4deg) scale(1.04)}
+.patas{width:min(300px,85%)}
+button{font:inherit;font-weight:600;color:#7d0a1c;background:var(--gold);border:0;border-radius:999px;padding:.8rem 1.6rem;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:focus-visible,.fl:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.petal{position:fixed;top:-2.5rem;z-index:9;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.fl{animation:none}.petal{display:none}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Un regalo de flores amarillas</h1>
+  <p class="para" id="para">Para ti</p>
+  <p class="sub">Flores que no se marchitan y no piden agua.</p>
+
+  <svg class="ramo" viewBox="0 0 320 300" role="img" aria-label="Ramo de flores amarillas con un lazo rojo">
+    <defs>
+      <symbol id="f" viewBox="-50 -50 100 100">
+        <g fill="#ffd60a" stroke="#f0a800" stroke-width="1.5">
+          <ellipse cy="-27" rx="12" ry="22"/><ellipse cy="-27" rx="12" ry="22" transform="rotate(45)"/>
+          <ellipse cy="-27" rx="12" ry="22" transform="rotate(90)"/><ellipse cy="-27" rx="12" ry="22" transform="rotate(135)"/>
+          <ellipse cy="-27" rx="12" ry="22" transform="rotate(180)"/><ellipse cy="-27" rx="12" ry="22" transform="rotate(225)"/>
+          <ellipse cy="-27" rx="12" ry="22" transform="rotate(270)"/><ellipse cy="-27" rx="12" ry="22" transform="rotate(315)"/>
+        </g>
+        <circle r="15" fill="#d62839"/><circle r="6" fill="#7d0a1c"/>
+      </symbol>
+    </defs>
+    <g fill="none" stroke="#3f9142" stroke-width="5" stroke-linecap="round">
+      <path d="M160 275Q160 170 160 65"/><path d="M160 275Q120 200 80 105"/><path d="M160 275Q200 200 240 105"/>
+      <path d="M160 275Q140 220 115 155"/><path d="M160 275Q180 220 205 155"/>
+    </g>
+    <g fill="#3f9142"><ellipse cx="135" cy="215" rx="20" ry="8" transform="rotate(-35 135 215)"/><ellipse cx="188" cy="215" rx="20" ry="8" transform="rotate(35 188 215)"/></g>
+    <use class="fl" href="#f" x="105" y="10" width="110" height="110" tabindex="0"/>
+    <use class="fl" href="#f" x="38" y="63" width="84" height="84" tabindex="0"/>
+    <use class="fl" href="#f" x="198" y="63" width="84" height="84" tabindex="0"/>
+    <use class="fl" href="#f" x="80" y="120" width="70" height="70" tabindex="0"/>
+    <use class="fl" href="#f" x="170" y="120" width="70" height="70" tabindex="0"/>
+    <path d="M118 255H202L214 292H106Z" fill="#d62839" stroke="#ffd60a" stroke-width="2"/>
+    <circle cx="160" cy="255" r="9" fill="#ffd60a"/>
+  </svg>
+  <p class="hint">Toca las flores.</p>
+
+  <p class="carta">Estas flores no se marchitan y son solo para ti: para que las mires cuando quieras y sonrías un poco.</p>
+
+  <aside class="etiqueta" aria-label="Otra nota">
+    <div>
+      <p class="et-t" id="nota-de">Una nota más</p>
+      <p id="nota-txt">No me olvidé de ti, dale a la guitarra y mira con atención.</p>
+    </div>
+    <button class="guitarra" id="guitarra" type="button" aria-label="Tocar la guitarra">
+      <svg viewBox="0 0 60 110" aria-hidden="true">
+        <rect x="25" y="0" width="10" height="12" rx="2" fill="#3b2314"/>
+        <rect x="27" y="8" width="6" height="52" fill="#5a3520"/>
+        <circle cx="30" cy="62" r="14" fill="#c9803a" stroke="#7d0a1c" stroke-width="2"/>
+        <circle cx="30" cy="84" r="19" fill="#c9803a" stroke="#7d0a1c" stroke-width="2"/>
+        <circle cx="30" cy="76" r="6" fill="#2b1810"/>
+        <rect x="23" y="93" width="14" height="3" rx="1" fill="#3b2314"/>
+        <g stroke="#fff6dc" stroke-width=".8"><line x1="28.5" y1="10" x2="28.5" y2="94"/><line x1="30" y1="10" x2="30" y2="94"/><line x1="31.5" y1="10" x2="31.5" y2="94"/></g>
+      </svg>
+    </button>
+  </aside>
+
+  <div class="perros" aria-label="Un perrito con una flor amarilla y un caminito de huellas">
+    <div class="fila">
+      <svg class="perro" id="perro" viewBox="0 0 200 215" role="img" aria-label="Perrito con una flor amarilla en la oreja y collar rojo" tabindex="0">
+        <ellipse cx="45" cy="88" rx="26" ry="48" fill="#8a4b2a" transform="rotate(20 45 88)"/>
+        <ellipse cx="155" cy="88" rx="26" ry="48" fill="#8a4b2a" transform="rotate(-20 155 88)"/>
+        <ellipse cx="100" cy="108" rx="62" ry="58" fill="#d9a066"/>
+        <ellipse cx="100" cy="132" rx="34" ry="26" fill="#f6dcb4"/>
+        <circle cx="78" cy="98" r="7" fill="#2b1810"/><circle cx="122" cy="98" r="7" fill="#2b1810"/>
+        <circle cx="80" cy="95" r="2.2" fill="#fff"/><circle cx="124" cy="95" r="2.2" fill="#fff"/>
+        <path d="M92 142Q100 166 108 142Z" fill="#ff6b81"/>
+        <path d="M100 128V138M100 138Q88 150 80 140M100 138Q112 150 120 140" fill="none" stroke="#2b1810" stroke-width="3" stroke-linecap="round"/>
+        <ellipse cx="100" cy="120" rx="12" ry="8" fill="#2b1810"/>
+        <path d="M52 158Q100 192 148 158L154 174Q100 208 46 174Z" fill="#d62839"/>
+        <circle cx="100" cy="192" r="9" fill="#ffd60a" stroke="#f0a800" stroke-width="2"/>
+        <use href="#f" x="8" y="28" width="58" height="58"/>
+      </svg>
+    </div>
+    <svg class="patas" viewBox="0 0 320 64" aria-hidden="true">
+      <defs><symbol id="p" viewBox="0 0 40 40"><g fill="#ffd60a"><ellipse cx="20" cy="27" rx="10" ry="8"/><ellipse cx="8" cy="16" rx="4" ry="5.5"/><ellipse cx="16" cy="9" rx="4" ry="5.5"/><ellipse cx="24" cy="9" rx="4" ry="5.5"/><ellipse cx="32" cy="16" rx="4" ry="5.5"/></g></symbol></defs>
+      <use href="#p" x="4" y="22" width="36" height="36" opacity=".45" transform="rotate(80 22 40)"/>
+      <use href="#p" x="58" y="4" width="36" height="36" opacity=".6" transform="rotate(80 76 22)"/>
+      <use href="#p" x="112" y="22" width="36" height="36" opacity=".75" transform="rotate(80 130 40)"/>
+      <use href="#p" x="166" y="4" width="36" height="36" opacity=".85" transform="rotate(80 184 22)"/>
+      <use href="#p" x="220" y="22" width="36" height="36" opacity=".95" transform="rotate(80 238 40)"/>
+      <use href="#p" x="274" y="4" width="36" height="36" transform="rotate(80 292 22)"/>
+    </svg>
+  </div>
+
+  <button id="lluvia" type="button">Otra lluvia de flores</button>
+</main>
+<script>
+const PARA = "Naoko";
+if (PARA) document.getElementById('para').textContent = 'Para ' + PARA;
+const NOTA_DE = "Annie"; // nombre de la otra persona
+const NOTA_TEXTO = "No me olvidé de ti, dale a la guitarra y mira con atención."; // texto de la nota
+if (NOTA_DE) document.getElementById('nota-de').textContent = 'Una nota para ' + NOTA_DE;
+if (NOTA_TEXTO) document.getElementById('nota-txt').textContent = NOTA_TEXTO;
+const emojis = ['🌼','🌻','🌼','🐾'];
+function lluvia(n, lista = emojis){
+  for (let i = 0; i < n; i++){
+    const s = document.createElement('span');
+    s.className = 'petal';
+    s.textContent = lista[Math.floor(Math.random()*lista.length)];
+    s.style.left = Math.random()*100 + 'vw';
+    s.style.fontSize = (1.2 + Math.random()*1.4) + 'rem';
+    s.style.animationDuration = (3 + Math.random()*3) + 's';
+    s.style.animationDelay = (Math.random()*1.2) + 's';
+    s.addEventListener('animationend', () => s.remove());
+    document.body.appendChild(s);
+  }
+}
+document.querySelectorAll('.fl').forEach(f => {
+  f.addEventListener('click', () => lluvia(14));
+  f.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lluvia(14); } });
+});
+document.getElementById('lluvia').addEventListener('click', () => lluvia(30));
+const musica = ['🎵','🎶','🎸','🎹'];
+document.getElementById('guitarra').addEventListener('click', () => lluvia(26, musica));
+const perro = document.getElementById('perro');
+perro.addEventListener('click', () => lluvia(14));
+perro.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lluvia(14); } });
+window.addEventListener('load', () => lluvia(18));
+</script>
+</body>
+</html>
